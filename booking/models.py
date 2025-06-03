@@ -7,7 +7,7 @@ class TypeRoom(models.Model):
     description = models.TextField(null=True, blank=True, verbose_name="Опис кімнати:")
 
     def __str__(self):
-        return f'Тип кімнати:{self.name}.'
+        return f'Тип кімнати: {self.name}.'
     
 
     class Meta():
@@ -24,7 +24,7 @@ class Room(models.Model):
     places = models.IntegerField(default=1)
 
     def __str__(self):
-        return f'Кімната:{self.name}, ціна:{self.price}.'
+        return f'Кімната: {self.name}, ціна: {self.price}.'
     
 
     class Meta():
