@@ -4,7 +4,7 @@
 
 <h2>Наші кімнати</h2>
 
-<ul class="list-group">
+<div class="rooms-list">
     {% for room in room_list %}
     <div class="card" style="width: 18rem;">
         <img src="{{room.picture.url}}" class="card-img-top" alt="...">
@@ -17,6 +17,6 @@
     {% empty %}
     <li class="list-group-item"> Немає кімнат. </li>
     {% endfor %}
-</ul>
+</div>
 
 {% endblock %}
