@@ -1,5 +1,4 @@
-from django.shortcuts import render, get_object_or_404
-
+from django.shortcuts import get_object_or_404, render
 from booking.models import Room, Booking
 
 
@@ -14,12 +13,11 @@ def main_page(request):
 
     return render(request, "booking/room_list.html", context) 
 
-
-def booking_page(request):
+def booking_page(request, room_id):
     room = get_object_or_404(Room, id=room_id)
 
-    contex = {
+    context = {
         'room': room
     }
 
-    
+    return render(request, 'booking/booking_page.html', context)

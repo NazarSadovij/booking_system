@@ -7,7 +7,7 @@ class TypeRoom(models.Model):
     description = models.TextField(null=True, blank=True, verbose_name="Опис кімнати:")
 
     def __str__(self):
-        return f'Тип кімнати: {self.name}.'
+        return f'{self.name}'
     
 
     class Meta():
@@ -51,4 +51,3 @@ class Booking(models.Model):
         verbose_name = "Бронювання"         # Назва в однині в адмінці
         verbose_name_plural = "Бронювання"  # Назва в множині
     
-
